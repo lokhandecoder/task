@@ -1,0 +1,36 @@
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+    margin-left: 5%;
+} 
+.form-data .contact{
+    margin-left: 19%;
+
+}
+.form-data .email{
+    margin-left: 24%;
+
+    
+}
+.form-data .skillsadd{
+    margin-left: 25%;
+
+    
+}
+.form-data .desc{
+    margin-left: 19%;
+
+    
+}
+.formbutton{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0 0 5px 2px rgba(31, 73, 125, 0.8);
+}

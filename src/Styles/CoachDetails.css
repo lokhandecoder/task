@@ -1,0 +1,63 @@
+.form{
+    margin-left: 5%;
+}
+.form .fname{
+    margin-left: 10%;
+}
+.form .mname{
+    margin-left: 8.8%;
+}
+.form .lname{
+    margin-left: 10%;
+}
+.form .gender{
+    margin-left: 11.5%;
+}
+.form .date{
+    margin-left: 9%;
+}
+.toolkitbutton{
+    margin-left: 19%;
+    margin-top: 1%;
+    box-shadow: 0 0 5px 2px rgba(31, 73, 125, 0.8);
+}
+.tables{
+    width: 100%;
+}
+.leftcoach{
+    border: 2px;
+    border-style: solid;
+    /* margin-left: 5%; */
+}
+.rightcoach{
+    border: 2px;
+    border-style: solid;
+}
+.tableskill{
+    /* margin: 10%; */
+
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+ 
+}
+.leftform label{
+    margin-left: 10%;
+    /* margin-top: 5%; */
+}
+.leftform{
+    margin-top: 5%;
+}
+.leftform button {
+    margin-left: 5%;
+}
+.leftform select{
+    margin-left: 5%;
+}
+.leftform .fromdate{
+    margin-left: 5%;
+}
+.leftform .todate{
+    margin-left: 5%;
+}

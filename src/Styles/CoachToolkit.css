@@ -1,0 +1,19 @@
+.inputfield label {
+    margin-left: 5%;
+    font-style:italic;
+    /* margin-right: 15%; */
+}
+.inputfield .name{
+    margin-left: 10%;
+}
+.inputfield .material{
+    margin-left: 7%;
+}
+.inputfield .link{
+    margin-left: 11%;
+}
+.savebuttontoolkit{
+    box-shadow: 0 0 5px 2px rgba(31, 73, 125, 0.8);
+    margin-left: 22%;
+    margin-top: 1%;
+}
