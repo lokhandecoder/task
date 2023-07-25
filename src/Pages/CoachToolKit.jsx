@@ -49,16 +49,14 @@ function CoachToolKit() {
       };
       SetTool([...tool, newTool]);
       const forLocalStoragetoolkit = [...tool, newTool];
-
       localStorage.setItem("toolkit", JSON.stringify(forLocalStoragetoolkit));
     }
   };
   useEffect(() => {
     const storedData1 = localStorage.getItem("toolkit");
     if (storedData1) {
-      console.log(storedData1)
+      console.log(storedData1);
       SetTool(JSON.parse(storedData1));
-
     }
   }, []);
 

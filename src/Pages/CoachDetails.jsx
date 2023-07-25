@@ -1,4 +1,5 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Styles/CoachDetails.css";
 
 const data = [
@@ -10,6 +11,7 @@ const data = [
 ];
 
 function CoachDetails() {
+  const navigate = useNavigate();
   const [datasave, setData] = useState([]);
   const [editingRowleft, setEditingRowleft] = useState(null);
   const [editingRowright, setEditingRowright] = useState(null);
@@ -20,6 +22,7 @@ function CoachDetails() {
       alertfname: "",
       alertmname: "",
       alertlname: "",
+      alertdob: "",
     },
   ]);
 
@@ -30,6 +33,7 @@ function CoachDetails() {
     const lname = e.target.elements.lname.value;
     const gender = e.target.elements.gender.value;
     const dob = e.target.elements.dob.value;
+    console.log(dob);
 
     if (fname.length === 0) {
       setAlertMessage({
@@ -42,6 +46,10 @@ function CoachDetails() {
     } else if (lname.length === 0) {
       setAlertMessage({
         alertlname: "Please enter the Last name",
+      });
+    } else if (dob < "2000-01-01" || dob > "2025-01-01") {
+      setAlertMessage({
+        alertdob: "Please enter the Date Correct ",
       });
     } else {
       const newdata = {
@@ -57,7 +65,8 @@ function CoachDetails() {
       const forLocalStoragedeatis = [...datasave, newdata];
 
       localStorage.setItem("details", JSON.stringify(forLocalStoragedeatis));
-      console.log(datasave);
+      alert("Data Saved SAuccessfully");
+      navigate("/coachlist");
     }
   };
   useEffect(() => {
@@ -247,6 +256,9 @@ function CoachDetails() {
         <div className="form">
           <label>Date of Birth</label>
           <input type="date" name="dob" className="date" />
+          {alertMessage && (
+            <span style={{ color: "red" }}>{alertMessage.alertdob}</span>
+          )}
         </div>
         <button className="toolkitbutton">Save</button>
       </form>

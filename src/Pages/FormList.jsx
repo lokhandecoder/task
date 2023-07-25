@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 function FormList() {
-
-
-  const [list, setList] = useState([])
+  const [list, setList] = useState([]);
   useEffect(() => {
-      const list = localStorage.getItem('form');
-      if (list) {
-        setList(JSON.parse(list));
-        
-      }
-  },[])
+    const list = localStorage.getItem("form");
+    if (list) {
+      setList(JSON.parse(list));
+    }
+  }, []);
   return (
     <div>
+      <h1>Registration Details</h1>
       <table className="Skillstable">
         <thead>
           <tr>
@@ -28,9 +26,8 @@ function FormList() {
             <th>Slot</th>
           </tr>
         </thead>
-      <tbody>
-        {
-          list.map((item, key) => (
+        <tbody>
+          {list.map((item, key) => (
             <tr key={key}>
               <td>{item.fname}</td>
               <td>{item.mname}</td>
@@ -43,13 +40,11 @@ function FormList() {
               <td>{item.desc}</td>
               <td>{item.slot}</td>
             </tr>
-          ))
-        }
-      </tbody>
+          ))}
+        </tbody>
       </table>
-
     </div>
-  )
+  );
 }
 
-export default FormList
+export default FormList;
