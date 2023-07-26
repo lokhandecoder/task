@@ -3,7 +3,10 @@ import Card from "../Components/Card";
 
 function HomePage() {
   return (
+    <div>
       <Card />
+
+    </div>
   );
 }
 
