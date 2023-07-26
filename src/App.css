@@ -36,9 +36,4 @@
     transform: rotate(360deg);
   }
 }
-hr{
-  color: blue;
-  border-block-color: inherit;
 
-  /* block-size: 10%; */
-}

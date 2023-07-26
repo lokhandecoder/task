@@ -20,7 +20,9 @@ function Card() {
               alt="Denim Jeans"
               style={{ width: "100%" }}
             />
+            <div className="tabname">
             <h2>Skills Details</h2>
+            </div>
           </Link>
         </div>
       </div>
@@ -36,7 +38,9 @@ function Card() {
               alt="Denim Jeans"
               style={{ width: "65%" }}
             />
+            <div className="tabname">
             <h2>Coaching ToolKit</h2>
+            </div>
           </Link>
         </div>
       </div>
@@ -52,7 +56,9 @@ function Card() {
               alt="Denim Jeans"
               style={{ width: "55%" }}
             />
+            <div className="tabname">
             <h2>Coach Details</h2>
+            </div>
           </Link>
         </div>
       </div>
@@ -65,7 +71,9 @@ function Card() {
               alt="Denim Jeans"
               style={{ width: "100%" }}
             />
+            <div className="tabname">
             <h2>Coach Request Form</h2>
+            </div>
           </Link>
         </div>
       </div>

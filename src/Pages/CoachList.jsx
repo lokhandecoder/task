@@ -12,31 +12,36 @@ function CoachList() {
 
   return (
     <div>
+      <div className="pagebody">
       <h1>Coach Details</h1>
+
       <table className="Skillstable">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>MIddle Name</th>
-            <th>Last Name</th>
-            <th>Gender</th>
-            <th>DAte OF Birth</th>
+            <th className="tabledatalist">ID</th>
+            <th className="tabledatalist">First Name</th>
+            <th className="tabledatalist">MIddle Name</th>
+            <th className="tabledatalist">Last Name</th>
+            <th className="tabledatalist">Gender</th>
+            <th className="tabledatalist">DAte OF Birth</th>
           </tr>
         </thead>
         <tbody>
           {coach.map((item, key) => (
             <tr key={key}>
-              <td>{item.id}</td>
-              <td>{item.fname}</td>
-              <td>{item.mname}</td>
-              <td>{item.lname}</td>
-              <td>{item.gender}</td>
-              <td>{item.dob}</td>
+              <td className="tabledatalist">{item.id}</td>
+              <td className="tabledatalist">{item.fname}</td>
+              <td className="tabledatalist">{item.mname}</td>
+              <td className="tabledatalist">{item.lname}</td>
+              <td className="tabledatalist">{item.gender}</td>
+              <td className="tabledatalist">{item.dob}</td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      </div>
+      
     </div>
   );
 }

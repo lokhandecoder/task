@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/SkillsPage.css";
 import "../Styles/RoundedSwitch.css";
+import "../Styles/InputStyle.css";
 import { useState, useEffect } from "react";
 
 const skillslist = [
@@ -59,22 +60,58 @@ function SkillsDetails() {
     );
     setEditingRow(null);
   };
+  const handleCancel = () => {
+    setEditingRow(null);
+  };
 
   return (
     <div className="pagebody">
-      <h3>Skills Details</h3>
-      <hr></hr>
-      <div className="skills">
+      {/* <div class="form__group field">
+        <input
+          type="input"
+          class="form__field"
+          placeholder="Name"
+          name="name"
+          id="name"
+          required
+        />
+        <label for="name" class="form__label">
+          Name
+        </label>
+      </div> */}
+      <h1>Skills Details</h1>
+      <div className="boxcontainer">
+        <div className="boxcontain">
         <form onSubmit={handleSave}>
-          <label>Skills : </label>
-          <input type="text" placeholder="Enter your skills" name="skills" />
-          {alertMessage && <span style={{ color: "red" }}>{alertMessage}</span>}
-          <button type="submit" className="savebutton">
-            SAVE
-          </button>
-        </form>
+        <div className="form__group field">
+        <input
+          type="input"
+          class="form__field"
+          placeholder="Skills"
+          name="skills"
+          id="name"
+          
+        />
+        {alertMessage && <span style={{ color: "red" }}>{alertMessage}</span>}
+        {/* <label  class="form__label">
+          Skills
+        </label> */}
+         <button class="button-3 skillbutton" type="submit">Save</button>
+
+        
       </div>
-      <hr></hr>
+          
+          {/* <label>Skills : </label>
+          <input type="text" placeholder="Enter your skills" name="skills" />
+          {alertMessage && <span style={{ color: "red" }}>{alertMessage}</span>} */}
+          {/* <button type="submit" className="savebutton">
+            SAVE
+          </button> */}
+        </form>
+
+        </div>
+       
+      </div>
 
       <table className="Skillstable">
         <thead>
@@ -93,6 +130,7 @@ function SkillsDetails() {
                 {editingRow && editingRow.id === item.id ? (
                   <input
                     type="text"
+                    class="form__field"
                     value={editingRow.skills}
                     onChange={(e) => handleInputChange(e, "skills")}
                   />
@@ -108,9 +146,12 @@ function SkillsDetails() {
               </td>
               <td>
                 {editingRow && editingRow.id === item.id ? (
-                  <button onClick={handleSaveClick}>Save</button>
+                  <div>
+                    <button className="button-3 "onClick={handleSaveClick}>Save</button>
+                    <button className="button-3 delete" onClick={handleCancel}>Cancel</button>
+                  </div>
                 ) : (
-                  <button onClick={() => handleEditClick(item)}>Edit</button>
+                  <button className="button-3 edit" onClick={() => handleEditClick(item)}>Edit</button>
                 )}
               </td>
             </tr>

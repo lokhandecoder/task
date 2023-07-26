@@ -17,3 +17,21 @@
     margin-left: 22%;
     margin-top: 1%;
 }
+.boxcontainer{
+        display: flex;
+        margin-left: 30%;
+        margin-right: 30%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        justify-content: center;
+        margin-bottom: 10%;
+        /* background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); */
+}
+
+.boxcontain{
+    margin: 10%;
+}
+.skillbutton{
+    /* margin: 10%;
+     */
+     justify-content: center;
+}

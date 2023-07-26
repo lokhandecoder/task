@@ -1,5 +1,8 @@
 .form{
     margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
 }
 .form .fname{
     margin-left: 10%;
@@ -10,12 +13,8 @@
 .form .lname{
     margin-left: 10%;
 }
-.form .gender{
-    margin-left: 11.5%;
-}
-.form .date{
-    margin-left: 9%;
-}
+
+
 .toolkitbutton{
     margin-left: 19%;
     margin-top: 1%;
@@ -26,12 +25,12 @@
 }
 .leftcoach{
     border: 2px;
-    border-style: solid;
+    /* border-style: solid; */
     /* margin-left: 5%; */
 }
 .rightcoach{
     border: 2px;
-    border-style: solid;
+    /* border-style: solid; */
 }
 .tableskill{
     /* margin: 10%; */

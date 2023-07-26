@@ -3,9 +3,7 @@ import Card from "../Components/Card";
 
 function HomePage() {
   return (
-    <>
       <Card />
-    </>
   );
 }
 

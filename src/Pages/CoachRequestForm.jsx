@@ -97,39 +97,55 @@ function CoachRequestForm() {
 
   return (
     <div className="pagebody">
-      <h3>CoachRequestForm</h3>
-      <hr></hr>
-      <form onSubmit={handleSubmit}>
-        <div className="form">
-          <label>First Name</label>
-          <input type="text" name="fname" className="fname" />
+      <h1>CoachRequestForm</h1>
+      <div className="boxcontainer">
+        <div className="boxcontain">
+        <form onSubmit={handleSubmit}>
+        <div className="formgap">
+          {/* <label>First Name</label> */}
+          <input type="input"
+          className="form__field"
+          placeholder="First Name"
+          name="fname"
+          id="fname"
+           />  
           {alertMessage && (
             <span style={{ color: "red" }}>{alertMessage.alertfname}</span>
           )}
         </div>
-        <div className="form">
-          <label>Middle Name</label>
-          <input type="text" name="mname" className="mname" />
+        <div className="formgap">
+          {/* <label>Middle Name</label> */}
+          <input type="input"
+          className="form__field"
+          placeholder="Middle Name"
+          name="mname"
+          id="mname"
+           />  
           {alertMessage && (
             <span style={{ color: "red" }}>{alertMessage.alertmname}</span>
           )}
         </div>
-        <div className="form">
-          <label>Last Name</label>
-          <input type="text" name="lname" className="lname" />
+        <div className="formgap">
+          {/* <label>Last Name</label> */}
+          <input type="input"
+          className="form__field"
+          placeholder="Last Name"
+          name="lname"
+          id="lname"
+           />     
           {alertMessage && (
             <span style={{ color: "red" }}>{alertMessage.alertlname}</span>
           )}
         </div>
-        <div className="form">
-          <label>Gender</label>
+        <div className="formgap">
+          {/* <label>Gender</label> */}
           <select name="gender" id="gender" className="gender">
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </div>
-        <div className="form">
-          <label>Date of Birth</label>
+        <div className="formgap">
+          {/* <label>Date of Birth</label> */}
           <input type="date" name="dob" className="date" />
           {alertMessage && (
             <span style={{ color: "red" }}>{alertMessage.alertldob}</span>
@@ -137,9 +153,14 @@ function CoachRequestForm() {
         </div>
         <div className="flex-container">
           <div className="flex-child left">
-            <div className="form-data">
-              <label>Contact No:</label>
-              <input type="text " name="contact" className="contact" />
+            <div className="form-data formgap">
+              {/* <label>Contact No:</label> */}
+              <input type="input"
+          className="form__field"
+          placeholder="Contact Number"
+          name="contact"
+          id="contact"
+           />     
               {alertMessage && (
                 <span style={{ color: "red" }}>
                   {alertMessage.alertcontact}
@@ -147,39 +168,52 @@ function CoachRequestForm() {
               )}
             </div>
             <div className="form-data">
-              <label>Email :</label>
-              <input type="email " name="email" className="email" />
+              {/* <label>Email :</label> */}
+              <input type="input"
+          className="form__field"
+          placeholder="Email"
+          name="email"
+          id="email"
+           />     
               {alertMessage && (
                 <span style={{ color: "red" }}>{alertMessage.alertemail}</span>
               )}
             </div>
             <div className="form-data">
-              <label>Skills:</label>
-              <input type="text " name="skills" className="skillsadd" />
-              {alertMessage && (
+              {/* <label>Skills:</label> */}
+              <input type="input"
+          className="form__field"
+          placeholder="Skills"
+          name="skills"
+          id="skills"
+           />                   {alertMessage && (
                 <span style={{ color: "red" }}>
                   {alertMessage.alertfskills}
                 </span>
               )}
             </div>
             <div className="form-data">
-              <label>Description:</label>
-              <textarea name="desc" className="desc" />
+              {/* <label>Description:</label> */}
+              <textarea name="desc" className="desc formgap" />
               {alertMessage && (
                 <span style={{ color: "red" }}>{alertMessage.alertdesc}</span>
               )}
             </div>
-            <button className="formbutton">Submit</button>
+            <button className="button-3">Submit</button>
           </div>
           <div className="flex-child right">
-            <h4>Session Slot</h4>
+            <h4>Date & Time Slot</h4>
             <div>
-              <label>Date & Time Slot</label>
+              {/* <label>Date & Time Slot</label> */}
               <input type="date" className="date" name="slot" />
             </div>
           </div>
         </div>
       </form>
+
+        </div>
+      </div>
+     
     </div>
   );
 }

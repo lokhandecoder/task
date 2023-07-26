@@ -2,6 +2,7 @@
     float: left;
     width: 25%;
     margin-top: 5%;
+    margin-bottom: 40%
   }
   
   /* Clear floats after the columns */
@@ -16,23 +17,47 @@
     margin: auto;
     text-align: center;
     font-family: arial;
-    /* margin-bottom: 5%; */
+    /* background-color: brown; */
+
+    /* background-color: brown; */
+    margin-bottom: 5%;
   }
   .img1{
     margin-bottom: 10%;
     margin-top: 23%;
+    mix-blend-mode: multiply;
+
+    /* mix-blend-mode:color-burn; */
+    /* filter: contrast(1); */
   }
   .img4{
     margin-top: 24%;
+    mix-blend-mode: multiply;
+
   }
   .img2{
     margin-top: 24%;
+    mix-blend-mode: multiply;
+
     margin-bottom: 10%;
   }
   .img3{
     margin-top: 24%;
     margin-bottom: 17%;
+    mix-blend-mode: multiply;
+
   }
   .card1{
     margin-bottom: 5%;
+  }
+  .row{
+    background-image: url('/public/bg.jpg');
+    /* height: auto; */
+  }
+  .hide-bg{
+    /* mix-blend-mode: multiply;
+    filter: contrast(0); */
+  }
+  .tabname{
+    padding: 2px;
   }

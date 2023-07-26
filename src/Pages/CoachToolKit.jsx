@@ -74,40 +74,60 @@ function CoachToolKit() {
     );
     setEditingRow(null);
   };
-
+  const handleCancel = () => {
+    setEditingRow(null);
+  };
   return (
     <div className="pagebody">
-      <h3>CoachToolKit</h3>
-      <hr></hr>
-      <form onSubmit={handleSubmit}>
-        <div className="inputfield">
-          <label>Name</label>
-          <input type="text" name="name" className="name" />
+      <h1>CoachToolKit</h1>
+      <div className="boxcontainer">
+        <div className="boxcontain">
+        <form onSubmit={handleSubmit}>
+        <div className="form">
+          {/* <label>Name</label> */}
+          <input type="input"
+          className="form__field"
+          placeholder="Name"
+          name="name"
+          id="name"
+           />
           {errorMsg.alertname && (
             <span style={{ color: "red" }}>{errorMsg.alertname}</span>
           )}
         </div>
-        <div className="inputfield">
-          <label>Material Type</label>
-          <input type="text" name="material" className="material" />
+        <div className="formgap">
+          {/* <label>Material Type</label> */}
+          <input type="input"
+          className="form__field"
+          placeholder="Material"
+          name="material"
+          id="material"
+           />
           {errorMsg.alerttype && (
             <span style={{ color: "red" }}>{errorMsg.alerttype}</span>
           )}
         </div>
-        <div className="inputfield">
-          <label>link</label>
-          <input type="text" name="link" className="link" />
+        <div className="formgap">
+          {/* <label>link</label> */}
+          <input type="input"
+          className="form__field"
+          placeholder="Link"
+          name="link"
+          id="link"
+           />
           {errorMsg.alertlink && (
             <span style={{ color: "red" }}>{errorMsg.alertlink}</span>
           )}
         </div>
-        <div>
-          <button type="submit" className="savebuttontoolkit">
-            Save
-          </button>
+        <div className="form">
+        <button type="submit"class="button-3 " role="button">Save</button>
         </div>
       </form>
-      <hr></hr>
+
+        </div>
+     
+      </div>
+      <div>
       <table className="Skillstable">
         <thead>
           <tr>
@@ -127,6 +147,7 @@ function CoachToolKit() {
                 {editingRow && editingRow.id === tool.id ? (
                   <input
                     type="text"
+                    class="form__field"
                     value={editingRow.name}
                     onChange={(e) => handleInputChange(e, "name")}
                   />
@@ -138,6 +159,7 @@ function CoachToolKit() {
                 {editingRow && editingRow.id === tool.id ? (
                   <input
                     type="text"
+                    class="form__field"
                     value={editingRow.type}
                     onChange={(e) => handleInputChange(e, "type")}
                   />
@@ -149,6 +171,7 @@ function CoachToolKit() {
                 {editingRow && editingRow.id === tool.id ? (
                   <input
                     type="text"
+                    class="form__field"
                     value={editingRow.link}
                     onChange={(e) => handleInputChange(e, "link")}
                   />
@@ -164,9 +187,12 @@ function CoachToolKit() {
               </td>
               <td>
                 {editingRow && editingRow.id === tool.id ? (
-                  <button onClick={handleSaveClick}>Save</button>
+                  <div>
+                    <button className="button-3 " onClick={handleSaveClick}>Save</button>
+                    <button  className="button-3 delete"onClick={handleCancel}>Cancel</button>
+                  </div>
                 ) : (
-                  <button type="submit" onClick={() => handleUpdate(tool)}>
+                  <button className="button-3 edit" type="submit" onClick={() => handleUpdate(tool)}>
                     Edit
                   </button>
                 )}
@@ -175,6 +201,9 @@ function CoachToolKit() {
           ))}
         </tbody>
       </table>
+
+      </div>
+      
     </div>
   );
 }

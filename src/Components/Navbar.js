@@ -3,6 +3,10 @@ import "../Styles/Navbar.css";
 import { Link, useLocation } from "react-router-dom";
 
 
+
+
+
+
 function Navbar() {
     const location = useLocation();
   return (
@@ -23,6 +27,34 @@ function Navbar() {
           </div>
         </div>
       </div>
+      {/* <nav className="nav">
+        <div className="container">
+          <div className="logo">
+          <Link to="/home">Home</Link>
+          </div>
+          <div id="mainListDiv" className="main_list">
+            <ul className="navlinks">
+              <li>
+              <Link to="/skills" className={"/skills" === location.pathname ? 'navTrigger active' : ''}>Skills Details</Link>
+              </li>
+              <li>
+              <Link to="/toolkit" className={"/toolkit" === location.pathname ? 'active' : ''}>Coaching ToolKit</Link>
+              </li>
+              <li>
+              <Link to="/details" className={"/details" === location.pathname ? 'active' : ''}>Coach Details</Link>
+              </li>
+              <li>
+              <Link to="/form" className={"/form" === location.pathname ? 'active' : ''}>Coach Request Form</Link>
+              </li>
+            </ul>
+          </div>
+          <span className="navTrigger">
+            <i />
+            <i />
+            <i />
+          </span>
+        </div>
+      </nav> */}
     </div>
   );
 }
