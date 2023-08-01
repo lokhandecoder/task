@@ -31,7 +31,7 @@ function Card() {
               style={{ width: "100%" }}
             />
             <div className="tabname">
-            <h2>Skills Details</h2>
+                  <h2>Skills Details</h2>
             </div>
           </Link>
         </div>

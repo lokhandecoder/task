@@ -6,7 +6,6 @@ import { Link, useLocation } from "react-router-dom";
 
 
 
-
 function Navbar() {
     const location = useLocation();
   return (
@@ -17,12 +16,12 @@ function Navbar() {
         <Link to="/toolkit" className={"/toolkit" === location.pathname ? 'active' : ''}>Coaching ToolKit</Link>
         <Link to="/details" className={"/details" === location.pathname ? 'active' : ''}>Coach Details</Link>
         <Link to="/form" className={"/form" === location.pathname ? 'active' : ''}>Coach Request Form</Link>
-        <div className="dropdown">
+        <div className="dropdown" >
           <button className="dropbtn">
             Lists
           </button>
           <div className="dropdown-content">
-            <Link to="/formlist" className="reg">Registration Details</Link>
+            <Link to="/formlist" className="reg" >Registration Details</Link>
             <Link to="/coachlist" className="win">Coach List</Link>
           </div>
         </div>

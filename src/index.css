@@ -21,28 +21,57 @@ code {
   min-height: 100vh;
   /* background: linear-gradient(to right, #00b09b, #96c93d); */
   /* background: linear-gradient(to right, #00b09b, #96c93d); */
-  background-image: url('/public/bg.jpg');
+  /* background-image: url('/public/bg.jpg'); */
   /* background:linear-gradient(to right, #00b09b, #96c93d); */
+  /* background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44); */
+/* background:  linear-gradient(to right, #DECBA4, #3E5151); */
+background-color: white;
 
   padding: 10px;
 }
 table {
 	width: 800px;
 	border-collapse: collapse;
-	overflow: hidden;
-	box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  background-color: linear-gradient(45deg, #49a09d, #5f2c82);
-}
+	/* background-color: white	; */
+	border-radius: 1%;
+	/* background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
 
+	/* overflow: hidden; */
+	/* box-shadow: 0 0 20px rgba(0,0,0,0.5); */
+  /* background-color: linear-gradient(45deg, #49a09d, #5f2c82); */
+}
+.getbox{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10%;
+	/* padding-top: 2%; */
+	/* padding-bottom: 2%; */
+	margin-top: 5%;
+	background: white;
+
+	/* margin-top: 10%; */
+	/* background-image: url('https://wallpaperaccess.com/full/1385482.jpg'); */
+	border-collapse: collapse;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.getboxcenter{
+	margin: 2%;
+	padding-left: 40%;
+	padding-right: 40%;
+}
 th,
 td {
 	padding: 15px;
-	background-color:linear-gradient(45deg, #49a09d, #5f2c82);
+	/* background-color:linear-gradient(45deg, #49a09d, #5f2c82); */
   text-align: center;
-	color: #fff; 
+	/* color: #fff;  */
 }
 
 th {
+	background-color: black;
+	color: white;
+
 	/* text-align: left; */
 }
 
@@ -54,7 +83,7 @@ thead {
 
 tbody {
 	tr {
-		&:hover {
+		:hover {
 			background-color: rgba(255,255,255,0.3);
 		}
 	}
@@ -77,3 +106,14 @@ tbody {
 tr :hover{
   /* background-color: rgba(255,255,255,0.3); */
 }
+.glow {
+	color: #444;
+	text-shadow: 
+	  1px 0px 1px #ccc, 0px 1px 1px #eee, 
+	  2px 1px 1px #ccc, 1px 2px 1px #eee,
+	  3px 2px 1px #ccc, 2px 3px 1px #eee,
+	  4px 3px 1px #ccc, 3px 4px 1px #eee,
+	  5px 4px 1px #ccc, 4px 5px 1px #eee,
+	  6px 5px 1px #ccc, 5px 6px 1px #eee,
+	  7px 6px 1px #ccc;
+  }

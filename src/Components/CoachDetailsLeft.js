@@ -34,28 +34,38 @@ function CoachDetailsLeft() {
 
       <td>
         {editingRowleft && editingRowleft.id === item.id ? (
-          <select
-            name="skillselect"
-            id="skillselect"
-            className="skillselect"
-            value={editingRowleft.skills}
-            onChange={(e) => handleInputChangeleft(e, "skills")}
-          >
-            <option value="data1">data1</option>
-            <option value="data2">data2</option>
-            <option value="data3">data3</option>
-            <option value="data4">data4</option>
-            <option value="data5">data5</option>
-          </select>
+          <div className="sidedrop">
+            <div className="input-box">
+              <select
+                name="skillselect"
+                id="skillselect"
+                value={editingRowleft.skills}
+                onChange={(e) => handleInputChangeleft(e, "skills")}
+              >
+                <option value="data1">data1</option>
+                <option value="data2">data2</option>
+                <option value="data3">data3</option>
+                <option value="data4">data4</option>
+                <option value="data5">data5</option>
+              </select>
+            </div>
+          </div>
         ) : (
           item.skills
         )}{" "}
       </td>
       <td>
         {editingRowleft && editingRowleft.id === item.id ? (
-          <button class="button-3" onClick={handleSaveClickleft}>Save</button>
+          <button class="button-3" onClick={handleSaveClickleft}>
+            Save
+          </button>
         ) : (
-          <button class="button-3 edit" onClick={() => handleEditClickleft(item)}>Edit</button>
+          <button
+            class="button-3 edit"
+            onClick={() => handleEditClickleft(item)}
+          >
+            Edit
+          </button>
         )}
       </td>
     </tr>
@@ -88,15 +98,22 @@ function CoachDetailsLeft() {
       {/* <div className="flex-child leftcoach "> */}
       <form onSubmit={handleAdd}>
         <div className="leftform">
-          <label>Skills</label>
-          <select name="skillselect" id="skillselect" className="skillselect">
-            <option value="data1">data1</option>
-            <option value="data2">data2</option>
-            <option value="data3">data3</option>
-            <option value="data4">data4</option>
-            <option value="data5">data5</option>
-          </select>
-          <button class="button-3 add" type="submit">Add</button>
+          <div className="input-box-coach">
+            <select name="skillselect" id="skillselect">
+              <option value="data1">data1</option>
+              <option value="data2">data2</option>
+              <option value="data3">data3</option>
+              <option value="data4">data4</option>
+              <option value="data5">data5</option>
+            </select>
+            <button class="button-3 add" type="submit">
+            Add
+          </button>
+          </div>
+          {/* <div className="input-box-coach button">
+            <input type="Submit" defaultValue="Add" />
+          </div> */}
+          
         </div>
       </form>
       <table className="tableskill">

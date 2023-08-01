@@ -96,11 +96,11 @@ function CoachDetailsRight() {
     <div>
       <form onSubmit={handledate}>
         <div>
-          <div className="leftform">
+          <div className="rightform">
             <label>From date</label>
-            <input type="date" className="date" name="fromdate" />
+            <input type="date" className="slotdate" name="fromdate" />
             <label>To date</label>
-            <input type="date" className="date" name="todate" />
+            <input type="date" className="slotdate" name="todate" />
             <button class="button-3 add"  type="submit">Add</button>
           </div>
         </div>

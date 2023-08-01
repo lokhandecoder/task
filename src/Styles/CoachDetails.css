@@ -54,9 +54,12 @@
 .leftform select{
     margin-left: 5%;
 }
-.leftform .fromdate{
-    margin-left: 5%;
+.rightform label{
+    margin-top: 1%;
+
 }
-.leftform .todate{
-    margin-left: 5%;
+.rightform{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
 }

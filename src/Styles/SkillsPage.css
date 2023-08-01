@@ -20,25 +20,31 @@ h3 {
   margin-left: 3%;
 }
 h1 {
-  justify-content: center;
+    text-align: center;
+    font: bold 80px Sans-Serif;
+    padding: 40px 0;
+  
+  /* justify-content: center;
   display: flex;
   margin-top: 3%;
   font-size: 55px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
   background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  /* text-shadow: 0px 5px white; */
+  text-shadow: 0px 5px white; */
 }
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
-    color: white;
+    background: gray;
+    /* background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44); */
+    color: black;
     text-align: center;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
   /* input {
     padding: 8px;
@@ -53,7 +59,7 @@ h1 {
   ::-moz-placeholder { color: #666; }
   :-ms-input-placeholder { color: #666; }  */
 
-  select{
+  .select{
     padding: 8px;
     outline: none;
     background: rgba(255,255,255,0.4);
@@ -78,7 +84,7 @@ h1 {
   ::-moz-placeholder { color: #666; }
   :-ms-input-placeholder { color: #666; } 
 
-  textarea{
+  /* textarea{
     padding: 45px;
     outline: none;
     background: rgba(255,255,255,0.4);
@@ -89,7 +95,7 @@ h1 {
   }::-webkit-input-placeholder { color: #666;} 
   :-moz-placeholder { color: #666; }
   ::-moz-placeholder { color: #666; }
-  :-ms-input-placeholder { color: #666; } 
+  :-ms-input-placeholder { color: #666; }  */
   /* input {
     background: rgba(255,255,255,0.4);
     border: none;
@@ -111,4 +117,5 @@ h1 {
   :-ms-input-placeholder { color: #666; } */
   .formgap{
     margin-top: 3%;
+    margin-left: 10%;
   }

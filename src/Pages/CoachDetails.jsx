@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../Styles/CoachDetails.css";
+import "../Styles/coachdetailform.css"
 import CoachDetailsLeft from "../Components/CoachDetailsLeft";
 import CoachDetailsRight from "../Components/CoachDetailsRight";
 import CoachDetailsForm from "../Components/CoachDetailsForm";
@@ -7,12 +8,13 @@ import CoachDetailsForm from "../Components/CoachDetailsForm";
 function CoachDetails() {
   return (
     <div className="pagebody">
-      <h1>CoachDetails</h1>
-      <div className="boxcontainer">
+      <div className="getbox">
+      {/* <h1>CoachDetails</h1> */}
         <div className="boxcontain">
           <CoachDetailsForm />
         </div>
-      </div>
+        
+       
       <div className="flex-container">
         <div className="flex-child leftcoach ">
           <CoachDetailsLeft />
@@ -21,6 +23,8 @@ function CoachDetails() {
           <CoachDetailsRight />
         </div>
       </div>
+      </div>
+
     </div>
   );
 }

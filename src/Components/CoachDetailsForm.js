@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import '../Styles/coachdetailform.css'
 
 const alert = [
   {
@@ -64,61 +65,109 @@ function CoachDetailsForm() {
     }
   }, []);
   return (
-    <div>
-      <form onSubmit={handleSave}>
-        <div className="form">
-          {/* <label>First Name</label> */}
-          <input type="input"
-          className="form__field"
-          placeholder="First Name"
-          name="fname"
-          id="fname"
-           />          {alertMessage && (
-            <span style={{ color: "red" }}>{alertMessage.alertfname}</span>
-          )}
-        </div>
-        <div className="form">
-          {/* <label>Middle Name</label> */}
-          <input type="input"
-          className="form__field"
-          placeholder="Middle Name"
-          name="mname"
-          id="mname"
-           />            {alertMessage && (
-            <span style={{ color: "red" }}>{alertMessage.alertmname}</span>
-          )}
-        </div>
-        <div className="form">
-          {/* <label>Last Name</label> */}
-          <input type="input"
-          className="form__field"
-          placeholder="Last Name"
-          name="lname"
-          id="lname"
-           />            {alertMessage && (
-            <span style={{ color: "red" }}>{alertMessage.alertlname}</span>
-          )}
-        </div>
-        <div className="form">
-          {/* <label>Gender</label> */}
-          <select name="gender" id="gender" className="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </div>
-        <div className="form">
-          {/* <label>Date of Birth</label> */}
-          <input type="date" name="dob" className="date" />
-          {alertMessage && (
-            <span style={{ color: "red" }}>{alertMessage.alertdob}</span>
-          )}
-        </div>
-        <div className="form">
-        <button class="button-3" role="button">Save</button>
-
-        </div>
-      </form>
+    <>
+    <div className="newbody newsize">
+<div className="wrapper">
+  <h2>Coach Details</h2>
+  <form onSubmit={handleSave}>
+    <div className="input-box" style={{marginRight : '8%'}}>
+    <input
+                type="input"
+                placeholder="First Name"
+                name="fname"
+                id="fname"
+                required
+              />
+    </div>  
+    <div className="input-box" style={{marginRight : '8%'}}>
+    <input
+                type="input"
+                placeholder="MIddle Name"
+                name="mname"
+                id="mname"
+              />
     </div>
+    <div className="input-box" style={{marginRight : '8%'}}>
+    <input
+                type="input"
+                placeholder="Last Name"
+                name="lname"
+                id="lname"
+              />
+    </div>
+    <div className="input-box" >
+          <select name="gender" id="gender" className="classic">
+          <option value="" disabled selected hidden>Select the gender</option>
+            <option value="male">Male</option>
+           <option value="female">Female</option>
+           </select>
+    </div>
+    <div className="input-box" style={{marginRight : '8%'}}>
+    <input type="date" name="dob" className="" />
+    </div>
+    <div className="input-box button">
+      <input type="Submit" defaultValue="Save" />
+    </div>
+  </form>
+</div>
+</div>
+
+    </>
+    // <div>
+    //   <form onSubmit={handleSave}>
+    //     <div className="form">
+    //       <label>First Name</label>
+    //       <input type="input"
+    //       className="form__field"
+    //       placeholder="First Name"
+    //       name="fname"
+    //       id="fname"
+    //        />          {alertMessage && (
+    //         <span style={{ color: "red" }}>{alertMessage.alertfname}</span>
+    //       )}
+    //     </div>
+    //     <div className="form">
+    //       <label>Middle Name</label>
+    //       <input type="input"
+    //       className="form__field"
+    //       placeholder="Middle Name"
+    //       name="mname"
+    //       id="mname"
+    //        />            {alertMessage && (
+    //         <span style={{ color: "red" }}>{alertMessage.alertmname}</span>
+    //       )}
+    //     </div>
+    //     <div className="form">
+    //       <label>Last Name</label>
+    //       <input type="input"
+    //       className="form__field"
+    //       placeholder="Last Name"
+    //       name="lname"
+    //       id="lname"
+    //        />            {alertMessage && (
+    //         <span style={{ color: "red" }}>{alertMessage.alertlname}</span>
+    //       )}
+    //     </div>
+    //     <div className="form">
+    //       <label>Gender</label>
+    //       <select name="gender" id="gender" className="gender">
+    //         <option value="male">Male</option>
+    //         <option value="female">Female</option>
+    //       </select>
+    //     </div>
+    //     <div className="form">
+    //       <label>Date of Birth</label>
+    //       <input type="date" name="dob" className="date" />
+    //       {alertMessage && (
+    //         <span style={{ color: "red" }}>{alertMessage.alertdob}</span>
+    //       )}
+    //     </div>
+    //     <div className="form">
+    //     <button class="button-3" role="button">Save</button>
+
+    //     </div>
+    //   </form>
+    // </div>
   );
 }
 
